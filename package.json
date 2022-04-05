@@ -11,6 +11,7 @@
   "dependencies": {},
   "devDependencies": {
     "@nrwl/cli": "13.9.6",
+    "@nrwl/next": "^13.9.6",
     "@nrwl/workspace": "13.9.6",
     "@nxrs/cargo": "^0.3.2",
     "@types/node": "16.11.7",
