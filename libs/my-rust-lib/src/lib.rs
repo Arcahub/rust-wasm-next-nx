@@ -17,3 +17,8 @@ extern "C" {
 pub fn greet() {
     alert("Hello, {{project-name}}!");
 }
+
+#[wasm_bindgen]
+pub fn bye() {
+    alert("Bye, {{project-name}}!");
+}

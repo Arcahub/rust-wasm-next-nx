@@ -3,6 +3,12 @@
   "projectType": "library",
   "sourceRoot": "libs/my-rust-lib/src",
   "targets": {
+    "wasm": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "wasm-pack build ./libs/my-rust-lib"
+      }
+    },
     "test": {
       "executor": "@nxrs/cargo:test",
       "options": {}
