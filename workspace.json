@@ -3,6 +3,7 @@
   "projects": {
     "my-next-app": "apps/my-next-app",
     "my-next-app-e2e": "apps/my-next-app-e2e",
+    "my-react-lib": "libs/my-react-lib",
     "my_rust_lib": "libs/my-rust-lib"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "root": "libs/my-react-lib",
+  "sourceRoot": "libs/my-react-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/my-react-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/my-react-lib"],
+      "options": {
+        "jestConfig": "libs/my-react-lib/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
