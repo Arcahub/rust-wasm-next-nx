@@ -1,9 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "my-buildable-react-lib": "libs/my-buildable-react-lib",
     "my-next-app": "apps/my-next-app",
     "my-next-app-e2e": "apps/my-next-app-e2e",
     "my-react-lib": "libs/my-react-lib",
-    "my_rust_lib": "libs/my-rust-lib"
+    "my-rust-lib": "libs/my-rust-lib"
   }
 }
