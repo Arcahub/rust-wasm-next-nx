@@ -5,9 +5,8 @@ import React from 'react';
 export const RustComponent = dynamic({
   loader: async () => {
     // Import the wasm module
-    const module = await import('@rust-wasm-next/my-rust-lib');
+    const module = await import('../pkg');
 
-    // const { greet } = await init_wasm();
     // Return a React component that calls the add_one method on the wasm module
     return React.memo(
       function RustComponent() {

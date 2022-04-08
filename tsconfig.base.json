@@ -19,7 +19,7 @@
         "libs/my-buildable-react-lib/src/index.ts"
       ],
       "@rust-wasm-next/my-react-lib": ["libs/my-react-lib/src/index.ts"],
-      "@rust-wasm-next/my-rust-lib": ["libs/my-rust-lib", "dist/libs/my-rust-lib"]
+      "@rust-wasm-next/my-rust-lib": ["libs/my-rust-lib"]
     }
   },
   "exclude": ["node_modules", "tmp"]

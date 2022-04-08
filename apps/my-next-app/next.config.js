@@ -18,11 +18,13 @@ const nextConfig = {
     // Since Webpack 5 doesn't enable WebAssembly by default, we should do it manually
     config.experiments = { asyncWebAssembly: true };
 
-    // config.plugins = [
-    //   new WasmPackPlugin({
-    //     crateDirectory: path.resolve(__dirname, '../../libs/my-rust-lib'),
-    //   }),
-    // ];
+    config.plugins.push(
+      new WasmPackPlugin({
+        outDir: path.resolve(__dirname, 'pkg'),
+        extraArgs: '--target bundler --mode normal',
+        crateDirectory: path.resolve(__dirname, '../../libs/my-rust-lib'),
+      })
+    );
 
     return config;
   },
