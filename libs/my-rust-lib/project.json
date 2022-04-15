@@ -3,10 +3,10 @@
   "projectType": "library",
   "sourceRoot": "libs/my-rust-lib/src",
   "targets": {
-    "wasm": {
+    "build": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "wasm-pack build ./libs/my-rust-lib"
+        "command": "wasm-pack build --target bundler ./libs/my-rust-lib --out-dir ../../dist/libs/my-rust-lib --scope rust-wasm-next"
       }
     },
     "test": {
