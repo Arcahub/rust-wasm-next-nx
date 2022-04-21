@@ -13,6 +13,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to my-next-app!</title>
       </Head>
       <main className="app">
+        <button id="play-pause"></button>
+        <div id="fps"></div>
+        <canvas id="game-of-life-canvas"></canvas>
         <Component {...pageProps} />
         <MyReactLib></MyReactLib>
         <MyBuildableReactLib></MyBuildableReactLib>
