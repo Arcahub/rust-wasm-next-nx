@@ -1,7 +1,13 @@
 name: Lint
 
 on:
-  push:
+  workflow_call:
+    inputs:
+      base_branch:
+        type: string
+        default: "main" # TODO : CHANGE TO MASTER
+        required: false
+        description: "Reference branch for nx affected"
 
 jobs:
   lint:
@@ -15,9 +21,9 @@ jobs:
       - name: Setup
         uses: ./.github/actions/local-action
 
-      - run: npx nx workspace-lint
+      - run: yarn nx workspace-lint
 
-      - run: npx nx format:check
+      - run: yarn nx format:check
 
       - name: Lint
         run: yarn nx affected --target=lint --parallel=3

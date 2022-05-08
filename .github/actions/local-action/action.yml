@@ -2,7 +2,7 @@ name: Setup
 description: "Reusable setup for CI"
 
 inputs:
-  master_branch:
+  base_branch:
     default: "main" # TODO : CHANGE TO MASTER
     required: false
     description: "Reference branch for nx affected"
@@ -20,6 +20,6 @@ runs:
     - name: Derive appropriate SHAs for base and head for `nx affected` commands
       uses: nrwl/nx-set-shas@v2
       with:
-        main-branch-name: "main" # TODO: CHANGE TO MASTER
+        main-branch-name: ${{ inputs.base_branch }}
         # error-on-no-successful-workflow: true # TODO: uncomment after first run
         set-environment-variables-for-job: true

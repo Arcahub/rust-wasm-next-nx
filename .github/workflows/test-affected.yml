@@ -1,7 +1,13 @@
 name: Test
 
 on:
-  push:
+  workflow_call:
+    inputs:
+      base_branch:
+        type: string
+        default: "main" # TODO : CHANGE TO MASTER
+        required: false
+        description: "Reference branch for nx affected"
 
 jobs:
   test:
