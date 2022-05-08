@@ -9,7 +9,9 @@ jobs:
     uses: ./.github/workflows/lint-affected.yml
 
   test:
+    needs: lint
     uses: ./.github/workflows/test-affected.yml
 
   build:
+    needs: test
     uses: ./.github/workflows/build-affected.yml
