@@ -1,0 +1,25 @@
+name: Setup
+description: "Reusable setup for CI"
+
+inputs:
+  master_branch:
+    default: "main" # TODO : CHANGE TO MASTER
+    required: false
+    description: "Reference branch for nx affected"
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "16"
+        cache: "yarn"
+    - run: yarn install --frozen-lockfile
+      shell: bash
+
+    - name: Derive appropriate SHAs for base and head for `nx affected` commands
+      uses: nrwl/nx-set-shas@v2
+      with:
+        main-branch-name: "main" # TODO: CHANGE TO MASTER
+        # error-on-no-successful-workflow: true # TODO: uncomment after first run
+        set-environment-variables-for-job: true

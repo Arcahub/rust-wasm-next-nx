@@ -1,0 +1,19 @@
+name: Test
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test affected
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup
+        uses: ./.github/actions/local-action
+
+      - name: Run test
+        run: yarn nx affected --target=test --parallel=3 --ci --code-coverage
