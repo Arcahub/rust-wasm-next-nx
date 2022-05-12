@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   displayName: 'my-next-app',
   preset: '../../jest.preset.js',
