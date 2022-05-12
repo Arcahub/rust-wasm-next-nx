@@ -2,16 +2,18 @@ name: Pull Request
 
 on:
   pull_request: {}
-  push: {}
+  pull_request_review:
+    types: [submitted]
 
 jobs:
   lint:
+    if: github.event.review.state == 'approved' || github.event_name == 'pull_request'
     uses: ./.github/workflows/lint-affected.yml
 
-  test:
-    needs: lint
-    uses: ./.github/workflows/test-affected.yml
-
   build:
-    needs: test
+    needs: lint
     uses: ./.github/workflows/build-affected.yml
+
+  test:
+    needs: build
+    uses: ./.github/workflows/test-affected.yml
