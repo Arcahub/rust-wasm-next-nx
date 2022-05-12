@@ -56,6 +56,7 @@ jobs:
           | awk -F'/' '{ print $2}')
           git checkout -b migration/nx-${NXVERSION}
           echo "::set-output name=branch::migration/nx-${NXVERSION}"
+          echo "::set-output name=nxversion::${NXVERSION}"
 
       - name: Download migrations files
         uses: actions/download-artifact@v3
@@ -82,10 +83,10 @@ jobs:
           script: |
             const { repo, owner } = context.repo;
             const result = await github.rest.pulls.create({
-              title: 'Migration',
+              title: 'Upgrade Nx to ${{ steps.branch.outputs.nxversion }}',
               owner,
               repo,
-              head: '${{ github.ref_name }}',
+              head: '${{ steps.branch.outputs.branch }}',
               base: 'develop',
               body: ''
             });
