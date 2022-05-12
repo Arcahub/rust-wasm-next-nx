@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup
-        uses: ./.github/actions/local-action
+        uses: ./.github/actions/setup
 
       - name: Run test
         run: yarn nx affected --target=test --parallel=3 --ci --code-coverage

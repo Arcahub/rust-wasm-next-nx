@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup
-        uses: ./.github/actions/local-action
+        uses: ./.github/actions/setup
 
       - name: Build
-        run: yarn nx affected --target=build --parallel=3
+        run: yarn nx affected --target=build --parallel=3 --
