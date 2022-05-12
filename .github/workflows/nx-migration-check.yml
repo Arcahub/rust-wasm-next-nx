@@ -66,7 +66,9 @@ jobs:
         run: yarn
 
       - name: Run migrations
-        run: yarn nx migrate --run-migrations --create-commits
+        run: |
+          yarn nx migrate --run-migrations --create-commits
+          git push
 
       - name: Push branch
         run: git push --set-upstream origin ${{ steps.branch.outputs.branch }}
