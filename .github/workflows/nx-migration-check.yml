@@ -71,8 +71,16 @@ jobs:
       - name: Push branch
         run: git push --set-upstream origin ${{ steps.branch.outputs.branch }}
 
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v4
+      - name: Create Pull Request
+        uses: actions/github-script@v6
         with:
-          branch: ${{ steps.branch.outputs.branch }}
-          base: develop
+          script: |
+            const { repo, owner } = context.repo;
+            const result = await github.rest.pulls.create({
+              title: 'Migration',
+              owner,
+              repo,
+              head: '${{ github.ref_name }}',
+              base: 'develop',
+              body: ''
+            });
