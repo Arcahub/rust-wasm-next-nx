@@ -53,7 +53,7 @@ jobs:
           | sort --version-sort \
           | tail -1 \
           | awk -F'/' '{ print $2}')
-          git checkout -b git checkout -b migration/nx-${NXVERSION}
+          git checkout -b migration/nx-${NXVERSION}
 
       - name: Download migrations files
         uses: actions/download-artifact@v3
