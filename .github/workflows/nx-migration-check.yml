@@ -71,9 +71,7 @@ jobs:
           git config user.email "<>"
 
       - name: Run migrations
-        run: |
-          yarn nx migrate --run-migrations --create-commits
-          git push
+        run: yarn nx migrate --run-migrations --create-commits
 
       - name: Push branch
         run: git push --set-upstream origin ${{ steps.branch.outputs.branch }}
