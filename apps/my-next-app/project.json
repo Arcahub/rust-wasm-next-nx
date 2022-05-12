@@ -1,5 +1,4 @@
 {
-  "root": "apps/my-next-app",
   "sourceRoot": "apps/my-next-app",
   "projectType": "application",
   "targets": {
