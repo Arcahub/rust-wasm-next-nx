@@ -60,6 +60,9 @@ jobs:
         with:
           name: migration-files
 
+      - name: Update npm packages
+        run: yarn
+
       - name: Run migrations
         run: yarn nx migrate --run-migrations --create-commits
 
