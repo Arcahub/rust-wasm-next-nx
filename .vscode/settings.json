@@ -1,0 +1,20 @@
+{
+  "files.autoSave": "off",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.detectIndentation": true,
+  "editor.formatOnSave": true,
+  "prettier.useEditorConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[*]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+  "git.inputValidation": "off",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

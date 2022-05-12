@@ -1,19 +1,19 @@
 name: Setup
-description: "Reusable setup for CI"
+description: 'Reusable setup for CI'
 
 inputs:
   base_branch:
-    default: "main" # TODO : CHANGE TO MASTER
+    default: 'main' # TODO : CHANGE TO MASTER
     required: false
-    description: "Reference branch for nx affected"
+    description: 'Reference branch for nx affected'
 
 runs:
   using: composite
   steps:
     - uses: actions/setup-node@v3
       with:
-        node-version: "16"
-        cache: "yarn"
+        node-version: '16'
+        cache: 'yarn'
     - run: yarn install --frozen-lockfile
       shell: bash
 

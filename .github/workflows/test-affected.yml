@@ -5,9 +5,9 @@ on:
     inputs:
       base_branch:
         type: string
-        default: "main" # TODO : CHANGE TO MASTER
+        default: 'main' # TODO : CHANGE TO MASTER
         required: false
-        description: "Reference branch for nx affected"
+        description: 'Reference branch for nx affected'
 
 jobs:
   test:
