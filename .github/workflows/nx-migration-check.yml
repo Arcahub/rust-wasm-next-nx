@@ -3,7 +3,7 @@ name: Check new Nx version
 on:
   schedule:
     - cron: "0 0 * * 0"
-    - cron: "*/5 * * * *"
+  push: {}
 
 jobs:
   check:
