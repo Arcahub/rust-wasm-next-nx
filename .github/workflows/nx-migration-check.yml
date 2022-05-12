@@ -67,7 +67,9 @@ jobs:
         run: yarn nx migrate --run-migrations --create-commits
 
       - name: Push branch
-        run: git push --set-upstream
+        run: |
+          BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+          git push --set-upstream origin ${BRANCH_NAME}
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4
