@@ -11,7 +11,8 @@
         "outputPath": "dist/apps/my-next-app"
       },
       "configurations": {
-        "production": {}
+        "production": {},
+        "development": {}
       }
     },
     "serve": {
@@ -24,8 +25,13 @@
         "production": {
           "buildTarget": "my-next-app:build:production",
           "dev": false
+        },
+        "development": {
+          "buildTarget": "my-next-app:build:development",
+          "dev": true
         }
-      }
+      },
+      "defaultConfiguration": "development"
     },
     "export": {
       "executor": "@nrwl/next:export",
