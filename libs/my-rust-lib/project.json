@@ -1,5 +1,4 @@
 {
-  "root": "libs/my-rust-lib",
   "projectType": "library",
   "sourceRoot": "libs/my-rust-lib/src",
   "targets": {
