@@ -74,6 +74,23 @@ jobs:
       - name: Run migrations
         run: yarn nx migrate --run-migrations --create-commits
 
+      - name: Re-update npm packages in case of additional changes
+        run: yarn
+
+      - name: if new npm update commit them
+        id: commit
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Update to nx-${NXVERSION}"
+          fi
+
+      - name: remove migrations.json
+        run: |
+          rm migrations.json
+          git add .
+          git commit -m "chore: remove migrations.json"
+
       - name: Push branch
         run: git push --set-upstream origin ${{ steps.branch.outputs.branch }}
 
