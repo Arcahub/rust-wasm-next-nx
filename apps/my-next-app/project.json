@@ -1,10 +1,13 @@
 {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/my-next-app",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nrwl/next:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/my-next-app",
@@ -41,7 +44,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/my-next-app"],
+      "outputs": [
+        "coverage/apps/my-next-app"
+      ],
       "options": {
         "jestConfig": "apps/my-next-app/jest.config.ts",
         "passWithNoTests": true
@@ -49,9 +54,13 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/my-next-app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "apps/my-next-app/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     }
   },
