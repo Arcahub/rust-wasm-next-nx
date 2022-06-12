@@ -50,5 +50,6 @@
       }
     }
   },
-  "defaultProject": "my-next-app"
+  "defaultProject": "my-next-app",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json"
 }
