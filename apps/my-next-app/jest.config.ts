@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* eslint-disable */
 export default {
   displayName: 'my-next-app',
   preset: '../../jest.preset.js',
