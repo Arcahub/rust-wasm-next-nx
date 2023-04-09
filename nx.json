@@ -17,12 +17,7 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -34,9 +29,7 @@
       }
     ]
   },
-  "plugins": [
-    "@nxrs/cargo"
-  ],
+  "plugins": ["@nxrs/cargo"],
   "generators": {
     "@nrwl/react": {
       "application": {
@@ -50,5 +43,6 @@
       }
     }
   },
-  "defaultProject": "my-next-app"
+  "defaultProject": "my-next-app",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json"
 }
