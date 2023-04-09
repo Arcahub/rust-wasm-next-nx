@@ -1,4 +1,6 @@
 {
+  "name": "my-next-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/my-next-app",
   "projectType": "application",
   "targets": {
@@ -12,7 +14,9 @@
       },
       "configurations": {
         "production": {},
-        "development": {}
+        "development": {
+          "outputPath": "apps/my-next-app"
+        }
       }
     },
     "serve": {
@@ -41,7 +45,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/my-next-app"],
+      "outputs": ["{workspaceRoot}/coverage/apps/my-next-app"],
       "options": {
         "jestConfig": "apps/my-next-app/jest.config.ts",
         "passWithNoTests": true
