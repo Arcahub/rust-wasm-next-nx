@@ -13,15 +13,15 @@
   },
   "plugins": ["@nxrs/cargo"],
   "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
     "@nrwl/next": {
       "application": {
         "style": "scss",
         "linter": "eslint"
+      }
+    },
+    "@nx/react": {
+      "application": {
+        "babel": true
       }
     }
   },

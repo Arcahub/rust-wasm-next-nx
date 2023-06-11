@@ -20,7 +20,6 @@
   "devDependencies": {
     "@nrwl/js": "16.3.2",
     "@nrwl/next": "16.3.2",
-    "@nrwl/react": "16.3.2",
     "@nx/cypress": "16.3.2",
     "@nx/linter": "16.3.2",
     "@nx/workspace": "16.3.2",
@@ -54,6 +53,7 @@
     "wasm-pack": "^0.10.2",
     "@nx/web": "16.3.2",
     "@nx/eslint-plugin": "16.3.2",
-    "@nx/jest": "16.3.2"
+    "@nx/jest": "16.3.2",
+    "@nx/react": "16.3.2"
   }
 }
